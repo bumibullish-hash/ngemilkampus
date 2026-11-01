@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Pengguna - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-admin="pengguna">
+<div class="admin-shell">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="admin-main">
+<header class="topbar">
+<button type="button" class="btn btn-ghost btn-sm menu-btn" id="menuBtn" aria-label="Buka menu"></button>
+<h1>Pengguna</h1>
+
+</header>
+<main class="admin-content">
+<div class="panel">
+<div class="filter-bar"><div class="field"><label for="cariPengguna">Cari pengguna</label><input class="input" type="search" id="cariPengguna" placeholder="Nama atau email"></div></div>
+<div class="table-wrap"><table class="table responsive"><thead><tr><th>Nama</th><th>Email</th><th>Nomor HP</th><th>Role</th><th>Terdaftar</th><th class="text-right">Pesanan</th><th class="text-right">Total belanja</th></tr></thead>
+<tbody id="tabelPengguna"></tbody></table></div>
+</div>
+</main>
+</div>
+</div>
+<script src="/js/common.js"></script>
+<script src="/js/admin-pengguna.js"></script>
+</body>
+</html>

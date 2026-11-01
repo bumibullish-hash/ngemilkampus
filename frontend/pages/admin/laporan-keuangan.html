@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Laporan keuangan - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-admin="laporan-keuangan" data-laporan="keuangan">
+<div class="admin-shell">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="admin-main">
+<header class="topbar">
+<button type="button" class="btn btn-ghost btn-sm menu-btn" id="menuBtn" aria-label="Buka menu"></button>
+<h1>Laporan keuangan</h1>
+<div class="flex gap no-print"><button type="button" class="btn btn-outline btn-sm" id="tombolCetak">Cetak</button><a class="btn btn-primary btn-sm" id="tombolPdf" href="#">Ekspor PDF</a></div>
+</header>
+<main class="admin-content">
+<div class="report-head"><h2>NgemilKampus - Laporan keuangan</h2><p id="judulCetak"></p></div>
+<div class="panel no-print">
+<div class="period-chips" id="chipPeriode"></div>
+<form id="formLaporan" class="filter-bar">
+<div class="flex gap wrap hidden" id="areaKustom">
+<div class="field"><label for="lDari">Tanggal awal</label><input class="input" type="date" id="lDari" name="from"></div>
+<div class="field"><label for="lSampai">Tanggal akhir</label><input class="input" type="date" id="lSampai" name="to"></div>
+</div>
+
+<button type="submit" class="btn btn-primary">Terapkan</button>
+</form>
+</div>
+<p class="muted">Periode: <strong id="labelPeriode">-</strong></p>
+<div class="stats stats-3" id="ringkasan"></div>
+<div class="panel"><div class="panel-head"><h2>Grafik</h2></div><div class="panel-body"><div class="chart-box"><canvas id="grafikLaporan" aria-label="Grafik laporan keuangan"></canvas></div></div></div>
+<div class="panel"><div class="panel-head"><h2>Rekapitulasi per periode</h2></div>
+<div class="table-wrap"><table class="table responsive"><thead><tr><th>Periode</th><th class="text-right">Transaksi</th><th class="text-right">Pendapatan</th><th class="text-right">Modal</th><th class="text-right">Pengeluaran</th><th class="text-right">Laba bersih</th></tr></thead>
+<tbody id="tabelLaporan"></tbody></table></div></div>
+<div class="panel"><div class="panel-head"><h2>Pengeluaran operasional</h2></div>
+<div class="table-wrap"><table class="table responsive"><thead><tr><th>Tanggal</th><th>Keterangan</th><th>Kategori</th><th class="text-right">Jumlah</th></tr></thead>
+<tbody id="tabelPengeluaran"></tbody></table></div></div>
+<p class="muted">Laba bersih = pendapatan transaksi Paid - harga modal produk terjual - pengeluaran operasional.</p>
+</main>
+</div>
+</div>
+<script src="/vendor/chart/chart.umd.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/admin-laporan.js"></script>
+</body>
+</html>

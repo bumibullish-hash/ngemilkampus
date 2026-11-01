@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Laporan penjualan - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-admin="laporan-penjualan" data-laporan="penjualan">
+<div class="admin-shell">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="admin-main">
+<header class="topbar">
+<button type="button" class="btn btn-ghost btn-sm menu-btn" id="menuBtn" aria-label="Buka menu"></button>
+<h1>Laporan penjualan</h1>
+<div class="flex gap no-print"><button type="button" class="btn btn-outline btn-sm" id="tombolCetak">Cetak</button><a class="btn btn-primary btn-sm" id="tombolPdf" href="#">Ekspor PDF</a></div>
+</header>
+<main class="admin-content">
+<div class="report-head"><h2>NgemilKampus - Laporan penjualan</h2><p id="judulCetak"></p></div>
+<div class="panel no-print">
+<div class="period-chips" id="chipPeriode"></div>
+<form id="formLaporan" class="filter-bar">
+<div class="flex gap wrap hidden" id="areaKustom">
+<div class="field"><label for="lDari">Tanggal awal</label><input class="input" type="date" id="lDari" name="from"></div>
+<div class="field"><label for="lSampai">Tanggal akhir</label><input class="input" type="date" id="lSampai" name="to"></div>
+</div>
+<div class="field"><label for="lStatus">Status pembayaran</label><select class="select" id="lStatus" name="status"><option value="">Semua status</option><option value="paid">Paid</option><option value="pending">Pending</option><option value="rejected">Rejected</option><option value="expired">Expired</option></select></div>
+<button type="submit" class="btn btn-primary">Terapkan</button>
+</form>
+</div>
+<p class="muted">Periode: <strong id="labelPeriode">-</strong></p>
+<div class="stats " id="ringkasan"></div>
+<div class="panel"><div class="panel-head"><h2>Grafik</h2></div><div class="panel-body"><div class="chart-box"><canvas id="grafikLaporan" aria-label="Grafik laporan penjualan"></canvas></div></div></div>
+<div class="panel"><div class="panel-head"><h2>Daftar transaksi</h2></div>
+<div class="table-wrap"><table class="table responsive"><thead><tr><th>No. transaksi</th><th>Tanggal</th><th>Pelanggan</th><th>Produk</th><th class="text-right">Total</th><th>Metode</th><th>Status</th></tr></thead>
+<tbody id="tabelLaporan"></tbody></table></div></div>
+<p class="muted">Total omzet hanya menghitung transaksi berstatus Paid. Transaksi Pending, Rejected, dan Expired tidak dihitung sebagai pendapatan.</p>
+</main>
+</div>
+</div>
+<script src="/vendor/chart/chart.umd.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/admin-laporan.js"></script>
+</body>
+</html>

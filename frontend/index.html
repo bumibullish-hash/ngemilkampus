@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Pesan camilan kampus - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-nav="beranda">
+<header id="siteHeader"></header>
+<main>
+<section class="hero">
+<div class="container hero-inner">
+<div>
+<h1>Pesan camilan favorit, ambil di kampus tanpa antre</h1>
+<p class="lead" id="heroTagline">Pesan camilan dan minuman, ambil tanpa antre</p>
+<div class="hero-info" id="heroInfo"></div>
+<a class="btn btn-primary" href="/produk">Lihat semua produk</a>
+</div>
+<div class="hero-tiles" id="heroTiles"></div>
+</div>
+</section>
+<div class="container">
+<section class="section">
+<div class="section-head"><h2>Kategori</h2></div>
+<div class="chips" id="chipKategori"></div>
+</section>
+<section class="section">
+<div class="section-head"><h2>Produk terbaru</h2><a href="/produk">Lihat semua</a></div>
+<div class="product-grid" id="produkUnggulan"><div class="loading" data-span="1"><div class="spinner"></div>Memuat produk...</div></div>
+</section>
+<section class="section">
+<h2>Cara memesan</h2>
+<div class="steps">
+<div class="step"><h3>Pilih dan checkout</h3><p>Masukkan camilan ke keranjang, lalu pilih titik dan waktu ambil.</p></div>
+<div class="step"><h3>Bayar dengan QRIS</h3><p>Scan QR dari halaman pembayaran dan unggah bukti di Bayaraja.</p></div>
+<div class="step"><h3>Ambil pesanan</h3><p>Setelah pembayaran dikonfirmasi, pesanan diproses dan siap diambil.</p></div>
+</div>
+</section>
+<section class="section" style="padding-bottom:3rem">
+<h2>Titik dan jam ambil</h2>
+<div class="info-box">
+<div><strong>Jam ambil</strong><span id="infoJam">-</span></div>
+<div><strong>Titik ambil</strong><span id="infoTitik">-</span></div>
+<div><strong>Kontak</strong><span id="infoKontak">-</span></div>
+</div>
+</section>
+</div>
+</main>
+<footer id="siteFooter"></footer>
+<script src="/js/common.js"></script>
+<script src="/js/katalog.js"></script>
+<script src="/js/index.js"></script>
+</body>
+</html>

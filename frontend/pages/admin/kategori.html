@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Kategori - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-admin="kategori">
+<div class="admin-shell">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="admin-main">
+<header class="topbar">
+<button type="button" class="btn btn-ghost btn-sm menu-btn" id="menuBtn" aria-label="Buka menu"></button>
+<h1>Kategori</h1>
+
+</header>
+<main class="admin-content">
+<div class="panel">
+<div class="panel-head"><h2>Daftar kategori</h2><button type="button" class="btn btn-primary btn-sm" id="tombolTambah">Tambah kategori</button></div>
+<div class="table-wrap"><table class="table responsive"><thead><tr><th>Nama</th><th>Deskripsi</th><th class="text-right">Jumlah produk</th><th></th></tr></thead>
+<tbody id="tabelKategori"></tbody></table></div>
+</div>
+<dialog class="modal" id="dialogKategori">
+<form id="formKategori" novalidate>
+<div class="modal-head"><h3 id="judulForm">Tambah kategori</h3><button type="button" class="btn btn-ghost btn-sm" data-tutup>Tutup</button></div>
+<div class="modal-body">
+<div class="alert alert-error form-alert hidden" role="alert"></div>
+<input type="hidden" name="id">
+<div class="field"><label for="kNama">Nama kategori</label><input class="input" id="kNama" name="name" maxlength="50" required></div>
+<div class="field"><label for="kDeskripsi">Deskripsi (opsional)</label><textarea class="textarea" id="kDeskripsi" name="description" maxlength="200"></textarea></div>
+</div>
+<div class="modal-actions"><button type="button" class="btn btn-outline" data-tutup>Batal</button><button type="submit" class="btn btn-primary" id="simpanKategori">Simpan kategori</button></div>
+</form>
+</dialog>
+</main>
+</div>
+</div>
+<script src="/js/common.js"></script>
+<script src="/js/admin-kategori.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Checkout - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-nav="keranjang">
+<header id="siteHeader"></header>
+<main class="main">
+<div class="container">
+<div class="page-head"><h1>Checkout</h1><p>Lengkapi detail pengambilan dan pilih metode pembayaran.</p></div>
+<div id="memuatCheckout" class="loading"><div class="spinner"></div>Memuat checkout...</div>
+<form id="formCheckout" class="checkout-layout hidden" novalidate>
+<div>
+<div class="card mb-2"><div class="card-body">
+<h3>Pengambilan pesanan</h3>
+<div class="alert alert-error form-alert hidden" role="alert"></div>
+<div class="field"><label for="titikAmbil">Titik ambil</label><select class="select" id="titikAmbil" name="pickupPoint"></select></div>
+<div class="field"><label for="waktuAmbil">Waktu ambil (WIB)</label><input class="input" type="datetime-local" id="waktuAmbil" name="pickupTime" required><p class="field-hint" id="jamAmbil"></p></div>
+<div class="field"><label for="catatan">Catatan (opsional)</label><textarea class="textarea" id="catatan" name="note" maxlength="200" placeholder="Contoh: es teh kurang manis"></textarea></div>
+</div></div>
+<div class="card"><div class="card-body">
+<h3>Metode pembayaran</h3>
+<div class="method-list">
+<label class="method"><input type="radio" name="paymentMethod" value="qris" checked><div><strong>QRIS</strong><span>QR Code tampil langsung di halaman pembayaran.</span></div></label>
+<label class="method"><input type="radio" name="paymentMethod" value="link"><div><strong>Payment Link</strong><span>Bayar lewat halaman pembayaran Bayaraja.</span></div></label>
+</div>
+</div></div>
+</div>
+<aside class="card summary"><div class="card-body">
+<h3>Ringkasan pesanan</h3>
+<div id="daftarItem"></div>
+<div class="summary-row"><span>Subtotal</span><span id="subtotalCheckout">Rp 0</span></div>
+<div class="summary-row summary-total"><span>Total pembayaran</span><span id="totalCheckout">Rp 0</span></div>
+<button type="submit" class="btn btn-primary btn-block mt-2" id="tombolBayar">Buat pembayaran</button>
+<a class="btn btn-ghost btn-block mt-1" href="/keranjang">Kembali ke keranjang</a>
+</div></aside>
+</form>
+</div>
+</main>
+<footer id="siteFooter"></footer>
+<script src="/js/common.js"></script>
+<script src="/js/checkout.js"></script>
+</body>
+</html>

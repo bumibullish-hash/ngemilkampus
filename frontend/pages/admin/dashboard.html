@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Dashboard - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-admin="dashboard">
+<div class="admin-shell">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="admin-main">
+<header class="topbar">
+<button type="button" class="btn btn-ghost btn-sm menu-btn" id="menuBtn" aria-label="Buka menu"></button>
+<h1>Dashboard</h1>
+
+</header>
+<main class="admin-content">
+<div class="stats">
+<div class="stat accent"><span>Total omzet</span><strong id="statOmzet">Rp 0</strong></div>
+<div class="stat"><span>Total transaksi</span><strong id="statTransaksi">0</strong></div>
+<div class="stat good"><span>Transaksi berhasil</span><strong id="statBerhasil">0</strong></div>
+<div class="stat"><span>Transaksi pending</span><strong id="statPending">0</strong></div>
+<div class="stat"><span>Jumlah produk</span><strong id="statProduk">0</strong></div>
+</div>
+<div class="grid-2">
+<div class="panel"><div class="panel-head"><h2>Grafik penjualan</h2>
+<div class="chips" id="pilihHari" style="margin:0"><button type="button" class="chip active" data-hari="7">7 hari</button><button type="button" class="chip" data-hari="30">30 hari</button></div></div>
+<div class="panel-body"><div class="chart-box"><canvas id="grafikPenjualan" aria-label="Grafik omzet harian"></canvas></div></div></div>
+<div class="panel"><div class="panel-head"><h2>Produk terlaris</h2></div><div class="panel-body" id="produkTerlaris"></div></div>
+</div>
+<div class="panel"><div class="panel-head"><h2>Transaksi terbaru</h2><a href="/admin/transaksi">Lihat semua</a></div>
+<div class="table-wrap"><table class="table responsive"><thead><tr><th>No. transaksi</th><th>Tanggal</th><th>Pelanggan</th><th class="text-right">Total</th><th>Status</th></tr></thead>
+<tbody id="transaksiTerbaru"></tbody></table></div></div>
+</main>
+</div>
+</div>
+<script src="/vendor/chart/chart.umd.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/admin-dashboard.js"></script>
+</body>
+</html>

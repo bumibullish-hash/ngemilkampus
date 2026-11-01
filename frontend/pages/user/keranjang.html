@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Keranjang - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-nav="keranjang">
+<header id="siteHeader"></header>
+<main class="main">
+<div class="container">
+<div class="page-head"><h1>Keranjang belanja</h1></div>
+<div class="cart-layout">
+<div class="card"><div class="card-body" id="isiKeranjang"><div class="loading"><div class="spinner"></div>Memuat keranjang...</div></div></div>
+<aside class="card summary hidden" id="ringkasanKeranjang"><div class="card-body">
+<h3>Ringkasan</h3>
+<div class="summary-row"><span>Jumlah item</span><span id="jumlahItem">0</span></div>
+<div class="summary-row summary-total"><span>Total</span><span id="totalKeranjang">Rp 0</span></div>
+<a class="btn btn-primary btn-block mt-2" href="/checkout" id="lanjutCheckout">Lanjut ke checkout</a>
+<a class="btn btn-ghost btn-block mt-1" href="/produk">Tambah produk lain</a>
+</div></aside>
+</div>
+</div>
+</main>
+<footer id="siteFooter"></footer>
+<script src="/js/common.js"></script>
+<script src="/js/keranjang.js"></script>
+</body>
+</html>

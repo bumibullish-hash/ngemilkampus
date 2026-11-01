@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Pengaturan usaha - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-admin="pengaturan">
+<div class="admin-shell">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="admin-main">
+<header class="topbar">
+<button type="button" class="btn btn-ghost btn-sm menu-btn" id="menuBtn" aria-label="Buka menu"></button>
+<h1>Pengaturan usaha</h1>
+
+</header>
+<main class="admin-content">
+<div class="panel" style="max-width:720px"><div class="panel-body">
+<form id="formUsaha" novalidate>
+<div class="alert alert-error form-alert hidden" role="alert"></div>
+<div class="field"><label for="uNama">Nama usaha</label><input class="input" id="uNama" name="businessName" maxlength="80" required></div>
+<div class="field"><label for="uSlogan">Slogan</label><input class="input" id="uSlogan" name="tagline" maxlength="120"></div>
+<div class="field"><label for="uAlamat">Alamat</label><input class="input" id="uAlamat" name="address" maxlength="200"></div>
+<div class="form-row">
+<div class="field"><label for="uTelepon">Nomor telepon</label><input class="input" id="uTelepon" name="phone" maxlength="30"></div>
+<div class="field"><label for="uEmail">Email</label><input class="input" id="uEmail" name="email" type="email"></div>
+</div>
+<div class="field"><label for="uJam">Jam ambil pesanan</label><input class="input" id="uJam" name="pickupHours" maxlength="100"></div>
+<div class="field"><label for="uTitik">Titik ambil (satu per baris)</label><textarea class="textarea" id="uTitik" name="pickupPoints" rows="4"></textarea><p class="field-hint">Titik ambil ini muncul saat pembeli checkout.</p></div>
+<button type="submit" class="btn btn-primary">Simpan pengaturan</button>
+</form></div></div>
+</main>
+</div>
+</div>
+<script src="/js/common.js"></script>
+<script src="/js/admin-pengaturan.js"></script>
+</body>
+</html>

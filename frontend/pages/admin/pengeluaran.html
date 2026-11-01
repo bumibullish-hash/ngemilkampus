@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Pengeluaran - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-admin="pengeluaran">
+<div class="admin-shell">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="admin-main">
+<header class="topbar">
+<button type="button" class="btn btn-ghost btn-sm menu-btn" id="menuBtn" aria-label="Buka menu"></button>
+<h1>Pengeluaran</h1>
+
+</header>
+<main class="admin-content">
+<div class="stats stats-3"><div class="stat accent"><span>Total pengeluaran (sesuai filter)</span><strong id="totalPengeluaran">Rp 0</strong></div></div>
+<div class="panel">
+<form id="formFilter" class="filter-bar">
+<div class="field"><label for="fDari">Dari tanggal</label><input class="input" type="date" id="fDari" name="from"></div>
+<div class="field"><label for="fSampai">Sampai tanggal</label><input class="input" type="date" id="fSampai" name="to"></div>
+<button type="submit" class="btn btn-primary">Terapkan</button>
+<button type="button" class="btn btn-outline" id="resetFilter">Reset</button>
+<button type="button" class="btn btn-primary" id="tombolTambah">Tambah pengeluaran</button>
+</form>
+<div class="table-wrap"><table class="table responsive"><thead><tr><th>Tanggal</th><th>Keterangan</th><th>Kategori</th><th class="text-right">Jumlah</th><th></th></tr></thead>
+<tbody id="tabelPengeluaran"></tbody></table></div>
+</div>
+<dialog class="modal" id="dialogPengeluaran">
+<form id="formPengeluaran" novalidate>
+<div class="modal-head"><h3 id="judulForm">Tambah pengeluaran</h3><button type="button" class="btn btn-ghost btn-sm" data-tutup>Tutup</button></div>
+<div class="modal-body">
+<div class="alert alert-error form-alert hidden" role="alert"></div>
+<input type="hidden" name="id">
+<div class="field"><label for="eJudul">Keterangan</label><input class="input" id="eJudul" name="title" maxlength="100" required></div>
+<div class="form-row">
+<div class="field"><label for="eKategori">Kategori</label><select class="select" id="eKategori" name="category"><option>Bahan baku</option><option>Kemasan</option><option>Transport</option><option>Peralatan</option><option selected>Lainnya</option></select></div>
+<div class="field"><label for="eJumlah">Jumlah (Rp)</label><input class="input" id="eJumlah" name="amount" type="number" min="1" step="1" required></div>
+</div>
+<div class="field"><label for="eTanggal">Tanggal</label><input class="input" id="eTanggal" name="date" type="date" required></div>
+<div class="field"><label for="eCatatan">Catatan (opsional)</label><input class="input" id="eCatatan" name="note" maxlength="200"></div>
+</div>
+<div class="modal-actions"><button type="button" class="btn btn-outline" data-tutup>Batal</button><button type="submit" class="btn btn-primary" id="simpanPengeluaran">Simpan</button></div>
+</form>
+</dialog>
+</main>
+</div>
+</div>
+<script src="/js/common.js"></script>
+<script src="/js/admin-pengeluaran.js"></script>
+</body>
+</html>

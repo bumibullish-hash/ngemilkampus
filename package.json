@@ -1,0 +1,39 @@
+{
+  "name": "ngemilkampus",
+  "version": "1.0.0",
+  "description": "Aplikasi pre-order camilan dan minuman kampus dengan pembayaran QRIS Bayaraja",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "seed": "node backend/seeds/seed.js",
+    "seed:contoh": "node backend/seeds/seed.js --contoh",
+    "cek-bayaraja": "node backend/scripts/cekBayaraja.js",
+    "test": "node --test tests/api.test.js",
+    "reset-admin": "node backend/scripts/resetAdmin.js",
+    "cek-login": "node backend/scripts/cekLogin.js",
+    "seed:dummy": "node backend/seeds/dummy.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "chart.js": "^4.6.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.2",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.4",
+    "multer": "^2.5.0",
+    "pdfkit": "^0.20.2",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

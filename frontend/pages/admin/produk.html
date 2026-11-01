@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Produk - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-admin="produk">
+<div class="admin-shell">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="admin-main">
+<header class="topbar">
+<button type="button" class="btn btn-ghost btn-sm menu-btn" id="menuBtn" aria-label="Buka menu"></button>
+<h1>Produk</h1>
+
+</header>
+<main class="admin-content">
+<div class="panel">
+<div class="filter-bar">
+<div class="field"><label for="cariProduk">Cari produk</label><input class="input" type="search" id="cariProduk" placeholder="Nama produk"></div>
+<div class="field"><label for="filterKategori">Kategori</label><select class="select" id="filterKategori"></select></div>
+<button type="button" class="btn btn-primary" id="tombolTambah">Tambah produk</button>
+</div>
+<div class="table-wrap"><table class="table responsive"><thead><tr><th>Foto</th><th>Nama</th><th>Kategori</th><th class="text-right">Harga jual</th><th class="text-right">Harga modal</th><th class="text-right">Stok</th><th>Status</th><th></th></tr></thead>
+<tbody id="tabelProduk"></tbody></table></div>
+</div>
+<dialog class="modal" id="dialogProduk">
+<form id="formProduk" novalidate>
+<div class="modal-head"><h3 id="judulForm">Tambah produk</h3><button type="button" class="btn btn-ghost btn-sm" data-tutup>Tutup</button></div>
+<div class="modal-body">
+<div class="alert alert-error form-alert hidden" role="alert"></div>
+<input type="hidden" name="id">
+<div class="field"><label for="pNama">Nama produk</label><input class="input" id="pNama" name="name" maxlength="100" required></div>
+<div class="field"><label for="pKategori">Kategori</label><select class="select" id="pKategori" name="category" required></select></div>
+<div class="form-row">
+<div class="field"><label for="pHarga">Harga jual (Rp)</label><input class="input" id="pHarga" name="price" type="number" min="1000" step="1" required></div>
+<div class="field"><label for="pModal">Harga modal (Rp)</label><input class="input" id="pModal" name="costPrice" type="number" min="0" step="1" required></div>
+</div>
+<div class="field"><label for="pStok">Stok</label><input class="input" id="pStok" name="stock" type="number" min="0" step="1" required></div>
+<div class="field"><label for="pDeskripsi">Deskripsi</label><textarea class="textarea" id="pDeskripsi" name="description" maxlength="500"></textarea></div>
+<div class="field"><label for="pFoto">Foto produk (JPG, PNG, WEBP, maks. 2 MB)</label><input class="input" id="pFoto" name="image" type="file" accept="image/jpeg,image/png,image/webp"><p class="field-hint" id="fotoSaatIni"></p></div>
+<label class="check"><input type="checkbox" name="isActive" checked> Produk aktif dan tampil di toko</label>
+</div>
+<div class="modal-actions"><button type="button" class="btn btn-outline" data-tutup>Batal</button><button type="submit" class="btn btn-primary" id="simpanProduk">Simpan produk</button></div>
+</form>
+</dialog>
+</main>
+</div>
+</div>
+<script src="/js/common.js"></script>
+<script src="/js/admin-produk.js"></script>
+</body>
+</html>

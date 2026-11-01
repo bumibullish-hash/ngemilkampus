@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "{frontend/**,node_modules/chart.js/dist/**,node_modules/pdfkit/js/data/**}",
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }],
+  "crons": [{ "path": "/api/cron/expire", "schedule": "0 0 * * *" }]
+}

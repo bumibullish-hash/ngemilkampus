@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f97316">
+<title>Masuk - NgemilKampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<main class="auth-wrap">
+<div class="auth-card">
+<a class="logo" href="/">Ngemil<span>Kampus</span></a>
+<h1>Masuk ke akun</h1>
+<p class="muted">Masuk untuk berbelanja atau mengelola toko.</p>
+<form id="formLogin" novalidate>
+<div class="alert alert-error form-alert hidden" role="alert"></div>
+<div class="field"><label for="email">Email</label><input class="input" type="email" id="email" name="email" autocomplete="email" required></div>
+<div class="field"><label for="password">Password</label><input class="input" type="password" id="password" name="password" autocomplete="current-password" required></div>
+<button type="submit" class="btn btn-primary btn-block">Masuk</button>
+</form>
+<p class="auth-foot">Belum punya akun? <a href="/register">Daftar sekarang</a></p>
+</div>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/auth.js"></script>
+</body>
+</html>
